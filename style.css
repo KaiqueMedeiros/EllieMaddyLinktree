@@ -58,7 +58,7 @@ body::before {
 .rodape {
     display: flex;
     justify-content: center;
-    margin-top: 2vh;
+    margin-top: 1vh;
 }
 
 .description p {
@@ -151,8 +151,9 @@ body::before {
         font-size: 15px;
     }
     body{
-        margin-top: 2vh;
+        margin-top: 1vh;
     }
+
 }
 
 .waviy {
