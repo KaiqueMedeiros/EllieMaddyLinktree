@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #19191a;
+    color: white;
+    background-attachment: fixed;
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat; 
+    z-index: -1; 
+    position: relative;
+}
+body::before {
+    content: '';
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; 
+    filter: blur(6px) brightness(80%);
+    z-index: -1; 
+   
+}
+
+
+
+.profile-picture, .title, .description, .social-media .rodape {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    z-index: 1; 
+    text-align: center;
+}
+
+
+.profile-picture img {
+    width: 40vh;
+    height: 25vh;
+    margin: 2vh auto;
+}
+
+.title {
+    margin: 2vh auto;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "poppins", cursive;
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+.description p {
+    margin: 3vh auto;
+    width: 70vh;
+    text-align: center;
+    font-size: 17px;
+    font-family: "poppins", sans-serif;
+}
+
+.social-media .button {
+    display: flex;
+    justify-content: center;
+    width: 50vh;
+    margin: 2vh auto 0 auto;
+}
+
+.social-media .button a {
+    display: inline-block;
+    width: 45vh;
+    height: 50px;
+    line-height: 50px;
+    margin: 2px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.15s;
+    margin: 2px auto; 
+}
+
+.social-media .button a i {
+    margin-right: 10px;  /* Adiciona um espaçamento à direita do ícone */
+    text-align: left;  /* Garante que o ícone fique alinhado à esquerda */
+}
+
+.button {
+    background-color: #963e41a6;
+    box-shadow: -5px 5px 3px #4d4d4d77;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.button:hover {
+    transition: background-color 0.15s;
+    background-color: #963e41cb;
+    box-shadow: -7px 7px 5px #333333a9;
+}
+
+@media only screen and (max-width: 768px) {
+    .description p {
+        width: 80%;
+        margin: 1vh auto;
+        font-size: 15px;
+    }
+
+    .social-media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+
+    .social-media .button {
+        width: 70%; 
+        margin: 1vh auto; 
+    }
+
+    .social-media .button a {
+        width: 100%;
+        height: 45px; 
+        font-size: 14px; 
+    }
+
+    .profile-picture img {
+        width: 37vh;
+        height: 23vh;
+        margin: 1vh auto;
+    }
+    .button a:hover {
+        cursor: default;
+    }
+    .container{
+        overflow: hidden;
+    }
+
+    .waviy span {
+        font-size: 15px;
+    }
+    body{
+        margin-top: 2vh;
+    }
+}
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 20px;
+}
+.waviy span {
+  font-family: 'poppins', sans-serif;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  animation: waviy 2s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-5px)
+  }
+}
